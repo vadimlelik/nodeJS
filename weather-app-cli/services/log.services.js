@@ -3,10 +3,10 @@ import dedent from "dedent-js";
 
 
 const printError = (error) => {
-    console.log('Error' + ' ' + chalk.bgRed(error))
+    console.log(`${chalk.bgRed('Error')} ${error}`)
 }
 const printSuccess = (error) => {
-    console.log('Error' + ' ' + chalk.green(error))
+    console.log(`${chalk.green('Success')} ${error}`)
 }
 
 const printHelp = () => {
