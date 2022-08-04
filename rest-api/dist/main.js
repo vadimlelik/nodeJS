@@ -10,12 +10,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = require("./app");
+const exetpionFilter_1 = require("./errors/exetpionFilter");
 const logger_service_1 = require("./logger/logger.service");
 const users_controler_1 = require("./users/users.controler");
 function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
         const logger = new logger_service_1.LoggerService();
-        const app = new app_1.App(logger, new users_controler_1.UserController(logger));
+        const app = new app_1.App(logger, new users_controler_1.UserController(logger), new exetpionFilter_1.ExaptionFilter(logger));
         yield app.init();
     });
 }
