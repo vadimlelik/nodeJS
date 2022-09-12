@@ -12,13 +12,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoggerService = void 0;
 const tslog_1 = require("tslog");
 const inversify_1 = require("inversify");
+<<<<<<< HEAD
+=======
+require("reflect-metadata");
+>>>>>>> 4fc1f2f (inversify)
 let LoggerService = class LoggerService {
     constructor() {
         this.logger = new tslog_1.Logger({
             displayLoggerName: false,
             displayInstanceName: false,
-            displayFilePath: 'hidden',
-            displayFunctionName: false
+            displayFilePath: "hidden",
+            displayFunctionName: false,
         });
     }
     log(...args) {

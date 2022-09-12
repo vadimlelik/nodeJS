@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Logger} from 'tslog'
 import {ILogger} from "./logger.interface";
 import {injectable} from "inversify";
@@ -5,26 +6,35 @@ import {injectable} from "inversify";
 @injectable()
 export class LoggerService implements ILogger{
     public logger: Logger
+=======
+import { Logger } from "tslog";
+import { Ilogger } from "./logger.interface";
+import {injectable} from "inversify";
+import 'reflect-metadata'
 
-    constructor() {
-        this.logger = new Logger({
-            displayLoggerName: false,
-            displayInstanceName: false,
-            displayFilePath: 'hidden',
-            displayFunctionName: false
-        })
-    }
+@injectable()
+export class LoggerService implements Ilogger {
+  public logger: Logger;
+>>>>>>> 4fc1f2f (inversify)
 
-    log(...args: unknown[]) {
-        this.logger.info(...args)
-    }
+  constructor() {
+    this.logger = new Logger({
+      displayLoggerName: false,
+      displayInstanceName: false,
+      displayFilePath: "hidden",
+      displayFunctionName: false,
+    });
+  }
 
-    error(...args: unknown[]) {
-        this.logger.error(...args)
-    }
+  log(...args: unknown[]) {
+    this.logger.info(...args);
+  }
 
-    warn(...args: unknown[]) {
-        this.logger.warn(...args)
-    }
+  error(...args: unknown[]) {
+    this.logger.error(...args);
+  }
 
+  warn(...args: unknown[]) {
+    this.logger.warn(...args);
+  }
 }
