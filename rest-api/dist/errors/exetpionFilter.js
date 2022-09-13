@@ -16,10 +16,7 @@ exports.ExaptionFilter = void 0;
 const http_error_class_1 = require("./http-error.class");
 const inversify_1 = require("inversify");
 const types_1 = require("../types");
-<<<<<<< HEAD
-=======
 require("reflect-metadata");
->>>>>>> 4fc1f2f (inversify)
 let ExaptionFilter = class ExaptionFilter {
     constructor(logger) {
         this.logger = logger;

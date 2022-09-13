@@ -12,12 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BaseController = void 0;
 const express_1 = require("express");
 const inversify_1 = require("inversify");
-<<<<<<< HEAD
-=======
 require("reflect-metadata");
-var express_2 = require("express");
-Object.defineProperty(exports, "Router", { enumerable: true, get: function () { return express_2.Router; } });
->>>>>>> 4fc1f2f (inversify)
 let BaseController = class BaseController {
     constructor(logger) {
         this.logger = logger;

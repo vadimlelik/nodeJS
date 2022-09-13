@@ -17,10 +17,7 @@ const base_controller_1 = require("../common/base.controller");
 const http_error_class_1 = require("../errors/http-error.class");
 const inversify_1 = require("inversify");
 const types_1 = require("../types");
-<<<<<<< HEAD
-=======
 require("reflect-metadata");
->>>>>>> 4fc1f2f (inversify)
 let UserController = class UserController extends base_controller_1.BaseController {
     constructor(loggerService) {
         super(loggerService);

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 function Component(id: number) {
     console.log('init Component')
     return (target: Function) => {
@@ -58,19 +58,3 @@ export class User {
 
 console.log(new User().id)
 console.log(new User().update(2))
-=======
-function Component(target: Function) {
-  console.log(target);
-}
-
-export class User {
-  id: number;
-
-  update(newId: number) {
-    this.id = newId;
-    return this.id;
-  }
-}
-
-console.log(new User().id);
->>>>>>> 4fc1f2f (inversify)

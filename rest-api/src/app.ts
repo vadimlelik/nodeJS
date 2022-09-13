@@ -2,7 +2,7 @@ import {ExaptionFilter} from "./errors/exetpionFilter";
 import express, {Express} from "express";
 import {Server} from "http";
 import {UserController} from "./users/users.controler";
-import {Ilogger} from "./logger/logger.interface";
+import {ILogger} from "./logger/logger.interface";
 import {inject, injectable} from "inversify";
 import {TYPES} from "./types";
 import 'reflect-metadata'
@@ -14,7 +14,7 @@ export class App {
     port: number;
 
     constructor(
-        @inject(TYPES.ILogger) private logger: Ilogger,
+        @inject(TYPES.ILogger) private logger: ILogger,
         @inject(TYPES.UserController) private userController: UserController,
         @inject(TYPES.ExeptionFilter) private exaptionFilter: ExaptionFilter,
     ) {
