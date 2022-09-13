@@ -22,7 +22,7 @@ let BaseController = class BaseController {
         return this._router;
     }
     send(res, code, message) {
-        res.type("application/json");
+        res.type('application/json');
         return res.status(code).json(message);
     }
     ok(res, message) {

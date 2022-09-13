@@ -23,15 +23,15 @@ let UserController = class UserController extends base_controller_1.BaseControll
         super(loggerService);
         this.loggerService = loggerService;
         this.bondRouter([
-            { path: "/register", method: "post", func: this.register },
-            { path: "/login", method: "post", func: this.login },
+            { path: '/register', method: 'post', func: this.register },
+            { path: '/login', method: 'post', func: this.login },
         ]);
     }
     login(req, res, next) {
-        next(new http_error_class_1.HttpError(401, "Ошибка авторизации", "login"));
+        next(new http_error_class_1.HttpError(401, 'Ошибка авторизации', 'login'));
     }
     register(req, res, next) {
-        next(new http_error_class_1.HttpError(401, "Ошибка регистрации"));
+        next(new http_error_class_1.HttpError(401, 'Ошибка регистрации'));
     }
 };
 UserController = __decorate([

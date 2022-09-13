@@ -18,7 +18,7 @@ let LoggerService = class LoggerService {
         this.logger = new tslog_1.Logger({
             displayLoggerName: false,
             displayInstanceName: false,
-            displayFilePath: "hidden",
+            displayFilePath: 'hidden',
             displayFunctionName: false,
         });
     }

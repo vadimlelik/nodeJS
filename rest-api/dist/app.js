@@ -40,7 +40,7 @@ let App = class App {
         this.port = 8000;
     }
     useRoutes() {
-        this.app.use("/users", this.userController.router);
+        this.app.use('/users', this.userController.router);
     }
     useExeptionFilters() {
         this.app.use(this.exaptionFilter.catch.bind(this.exaptionFilter));
