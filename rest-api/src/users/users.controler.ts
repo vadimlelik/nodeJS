@@ -6,6 +6,8 @@ import { inject, injectable } from 'inversify';
 import { TYPES } from '../types';
 import 'reflect-metadata';
 import { IUserController } from './users.controller.interfece';
+import { UserLoginDto } from './dto/user-login.dto';
+import { UserRegisterDto } from './dto/user-register.dto';
 
 @injectable()
 export class UserController extends BaseController implements IUserController {
@@ -17,12 +19,13 @@ export class UserController extends BaseController implements IUserController {
 		]);
 	}
 
-	login(req: Request, res: Response, next: NextFunction): void {
-		console.log('ds');
+	login(req: Request<{},{},UserLoginDto>, res: Response, next: NextFunction): void {
+		console.log(req.body);
 
 		next(new HttpError(401, 'Ошибка авторизации', 'login'));
 	}
-	register(req: Request, res: Response, next: NextFunction): void {
-		next(new HttpError(401, 'Ошибка регистрации'));
+	register(req: Request<{},{},UserRegisterDto>, res: Response, next: NextFunction): void {
+		console.log(req.body);
+		this.ok(res,'register')
 	}
 }
