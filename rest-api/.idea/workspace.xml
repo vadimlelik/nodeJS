@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58267986-e5a7-4ba7-91f5-c7d457b6eb54" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/middleware.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/base.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/base.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/route.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/route.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/validate.middlweare.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/dto/user-register.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/dto/user-register.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/users/users.controler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/users.controler.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663315266657</updated>
-      <workItem from="1663315270951" duration="1437000" />
+      <workItem from="1663315270951" duration="2986000" />
     </task>
     <servers />
   </component>

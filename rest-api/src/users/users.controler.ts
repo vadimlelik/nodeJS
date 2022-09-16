@@ -9,6 +9,7 @@ import 'reflect-metadata';
 import {IUserController} from './users.controller.interfece';
 import {UserLoginDto} from './dto/user-login.dto';
 import {UserRegisterDto} from './dto/user-register.dto';
+import {ValidateMiddlweare} from "../common/validate.middlweare";
 
 @injectable()
 export class UserController extends BaseController implements IUserController {
@@ -18,7 +19,12 @@ export class UserController extends BaseController implements IUserController {
     ) {
         super(loggerService);
         this.bondRouter([
-            {path: '/register', method: 'post', func: this.register,},
+            {
+                path: '/register',
+                method: 'post',
+                func: this.register,
+                middlewares: [new ValidateMiddlweare(UserRegisterDto)]
+            },
             {path: '/login', method: 'post', func: this.login},
         ]);
     }
