@@ -4,11 +4,11 @@ import { App } from './app';
 import { ExaptionFilter } from './errors/exetpionFilter';
 import { LoggerService } from './logger/logger.service';
 import { UserController } from './users/users.controler';
+import { UserService } from './users/users.service';
 import { Container, ContainerModule, interfaces } from 'inversify';
 import { ILogger } from './logger/logger.interface';
 import { TYPES } from './types';
 import { IExaptionFilter } from './errors/exepation.filter.interface';
-import { UserService } from './users/users.service';
 
 export interface IBootstrapReturn {
 	appContainer: Container;
