@@ -11,7 +11,8 @@
 		"dev": "nodemon",
 		"dev:inspect": "nodemon -e ts,json --exec node --inspect=localhost:9222 -r ts-node/register src/main.ts",
 		"build": "tsc",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"generate": "npx prisma generate"
 	},
 	"author": "Vadim Cvirko",
 	"license": "ISC",

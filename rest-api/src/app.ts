@@ -8,6 +8,7 @@ import 'reflect-metadata';
 import { IExaptionFilter } from './errors/exepation.filter.interface';
 import { IConfigService } from './config/config.service.interfece';
 import { UserController } from './users/users.controler';
+import { PrismaServive } from './database/prisma.service';
 
 @injectable()
 export class App {
@@ -20,6 +21,7 @@ export class App {
 		@inject(TYPES.UserController) private userController: UserController,
 		@inject(TYPES.ExeptionFilter) private exaptionFilter: IExaptionFilter,
 		@inject(TYPES.ConfigService) private configService: IConfigService,
+		@inject(TYPES.PrismaServive) private prismaService: PrismaServive,
 	) {
 		this.app = express();
 		this.port = 8000;
@@ -41,6 +43,7 @@ export class App {
 		this.useMiddleWare();
 		this.useRoutes();
 		this.useExeptionFilters();
+		await this.prismaService.connect();
 		this.server = this.app.listen(this.port);
 		this.logger.log(`Сервер запущен на http://localhost:${this.port}`);
 	}
